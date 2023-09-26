@@ -1,2 +1,2 @@
 # todo-listapp
-Todo list app using flask sqlite3 and tailwind css
+Todo list app using flask,sqlite3,tailwind css
