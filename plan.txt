@@ -1,0 +1,5 @@
+Todo app plan:
+	Spiffy app with tailwind (ALMOST DONE)
+	Add a db to log users instead of doing it within python file 
+	Create a user type that will store the users todo list
+

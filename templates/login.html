@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<head>
+	<link href="{{url_for('static',filename='css/main.css')}}" rel="stylesheet">
+</head>
+
+<body class="bg-slate-500">
+	<div class="h-screen flex items-center justify-center">
+		<form method='post' class="grid grid-rows-2 w-72">
+			<p for="user">Username</p>
+			<input name='user' id='user' class="outline rounded pl-1">
+			<p for="password">Password</p>
+			<input id='password' name='password' class="outline rounded pl-1">
+			<input type='submit' value='login' class="bg-cyan-400 outline rounded translate-y-6 hover:bg-lime-500">
+
+			<p class="rounded translate-y-6 ">{{error}}</p>
+		</form>
+	</div>
+
+</body>

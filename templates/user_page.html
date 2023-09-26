@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+	<script></script>
+	<link href="{{url_for('static',filename='css/main.css')}}" rel="stylesheet">
+</head>
+<body class="bg-slate-700">
+	<form method='post' class="translate-x-96 translate-y-2 pl-4">
+		<input name='todo-item' class="pl-1 bg-cyan-400 outline outline-4 outline-cyan-200 rounded">
+		<input formaction=/user/add type='submit' value="Add task" id='task' name='task' for='todo-item' class="outline rounded outline-lime-200 bg-lime-400">
+		<input formaction=/user/logout type='submit' value='Logout' class="outline rounded outline-rose-200 bg-rose-400 ">
+	</form>
+	<div class ="w-96 outline outline-slate-600 rounded bg-slate-600 shadow-2xl shadow-gray-500/50 translate-y-5  translate-x-96">
+		{% block content %}
+			<div class="p-2">
+				<div class="pb-2">ID TASK</div>
+				<ul class="">
+				{% for i in todo %}
+					<li class="pl-1 outline rounded outline-slate-300 bg-slate-100 hover:bg-slate-400">{{i}}</li>
+					<div class="pb-4"></div>
+					<form method='post' class="pb-4">
+						<input type="submit" formaction="/user/remove/{{i[1]}}"class="outline rounded outline-rose-200 bg-rose-400" value="X">
+					</form>
+				{% endfor %}
+				</ul>
+			</div>
+		{% endblock %}
+		{{error}}
+	</div>
+</body>
